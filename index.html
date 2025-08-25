@@ -24,8 +24,9 @@
             <p class="text-md text-gray-400 mt-2">Estatísticas de frequência e pontuação da temporada</p>
         </header>
 
-        <!-- Container da Tabela para Responsividade -->
-        <div class="overflow-x-auto bg-gray-800 rounded-xl shadow-lg">
+
+        <!-- Tabela Jogadores de Linha -->
+        <div class="overflow-x-auto bg-gray-800 rounded-xl shadow-lg mb-10">
             <table class="w-full text-sm text-left text-gray-400">
                 <thead class="text-xs uppercase bg-gray-700 text-gray-400">
                     <tr>
@@ -42,6 +43,26 @@
                 </thead>
                 <tbody id="stats-table-body">
                     <!-- Linhas da tabela serão inseridas aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela Goleiros -->
+        <div class="overflow-x-auto bg-gray-800 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold text-white px-6 pt-6 pb-2">Goleiros</h2>
+            <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs uppercase bg-gray-700 text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">#</th>
+                        <th scope="col" class="px-6 py-3">Goleiro</th>
+                        <th scope="col" class="px-6 py-3 text-center">P</th>
+                        <th scope="col" class="px-6 py-3 text-center">GS</th>
+                        <th scope="col" class="px-6 py-3 text-center" title="Média de Gols Sofridos por Partida">Média GS</th>
+                        <th scope="col" class="px-6 py-3 text-center">Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody id="goalkeeper-table-body">
+                    <!-- Linhas da tabela de goleiros -->
                 </tbody>
             </table>
         </div>
