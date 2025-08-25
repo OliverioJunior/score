@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     processedPlayers.forEach((player, index) => {
         const rank = index + 1;
         const row = document.createElement('tr');
-        
+
         // Define as classes de estilo para a linha
         row.className = 'border-b dark:border-gray-700';
         if (player.isGoleiro) {
@@ -56,16 +56,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Ícone de luva para goleiros
-        const goalkeeperIcon = player.isGoleiro 
+        const goalkeeperIcon = player.isGoleiro
             ? `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-block mr-2 text-blue-500" viewBox="0 0 16 16">
                  <path d="M7.563.063a1 1 0 0 1 .874 0l5.5 3.143a1 1 0 0 1 .563.937v5.714a1 1 0 0 1-.563.937l-5.5 3.143a1 1 0 0 1-.874 0l-5.5-3.143A1 1 0 0 1 1.5 9.857V4.143a1 1 0 0 1 .563-.937zM8 1.173 3.063 4.11v5.78l4.937 2.964 4.937-2.964V4.11z"/>
                  <path d="M11.5 9.092a.5.5 0 0 0-.832-.375l-2.5 1.875a.5.5 0 0 0 0 .75l2.5 1.875a.5.5 0 0 0 .832-.375zM8.5 6.51V4.893l-2.083 1.25a.5.5 0 0 0 0 .866zm-3.575 3.255L2.5 8.673v-1.35L4.5 6.432a.5.5 0 0 0 .832-.375V4.143l-2.201 1.32a.5.5 0 0 0-.263.438v5.714a.5.5 0 0 0 .263.438L4.925 13.3v-1.928a.5.5 0 0 0-.832-.375z"/>
                </svg>`
             : '';
-        
+
         // Formatação dos números
         const formatNumber = (num) => num.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         const formatInt = (num) => num || '-';
+
+        // Definir cor da pontuação
+        let scoreClass = '';
+        if (player.isGoleiro) {
+            scoreClass = 'text-[#8B1E3F]'; // vinho escuro
+        } else if (rank === 1) {
+            scoreClass = 'text-green-600';
+        } else if (rank === 2) {
+            scoreClass = 'text-green-500';
+        } else if (rank === 3) {
+            scoreClass = 'text-green-400';
+        } else if (rank === 4) {
+            scoreClass = 'text-gradient-green-blue-1'; // degradê custom
+        } else if (rank === 5) {
+            scoreClass = 'text-gradient-green-blue-2';
+        } else if (rank === 6) {
+            scoreClass = 'text-gradient-green-blue-3';
+        } else {
+            scoreClass = 'text-blue-500';
+        }
+
+        // Adicionar estilos de degradê customizados via style inline
+        let scoreStyle = '';
+        if (scoreClass.startsWith('text-gradient')) {
+            // Definir degradê manualmente para ranks 4, 5, 6
+            if (rank === 4) {
+                scoreStyle = 'background: linear-gradient(90deg, #34d399 40%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;';
+            } else if (rank === 5) {
+                scoreStyle = 'background: linear-gradient(90deg, #34d399 40%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;';
+            } else if (rank === 6) {
+                scoreStyle = 'background: linear-gradient(90deg, #6ee7b7 20%, #93c5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;';
+            }
+            scoreClass = '';
+        }
 
         row.innerHTML = `
             <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">${rank}</td>
@@ -78,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="px-6 py-4 text-center">${formatInt(player.golsSofridos)}</td>
             <td class="px-6 py-4 text-center">${formatNumber(player.mediaParticipacoes)}</td>
             <td class="px-6 py-4 text-center">${player.isGoleiro ? formatNumber(player.mediaGolsSofridos) : '-'}</td>
-            <td class="px-6 py-4 text-center font-bold text-lg ${player.pontuacaoTotal > 5 ? 'text-emerald-500' : (player.pontuacaoTotal > 2 ? 'text-sky-500' : '')}">${formatNumber(player.pontuacaoTotal)}</td>
+            <td class="px-6 py-4 text-center font-bold text-lg ${scoreClass}" style="${scoreStyle}">${formatNumber(player.pontuacaoTotal)}</td>
         `;
         tableBody.appendChild(row);
     });
