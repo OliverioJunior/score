@@ -15,8 +15,8 @@ const playersData = [
   { "nome": "Thawan", "gols": 4, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
   { "nome": "Guilherme", "gols": 1, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
   { "nome": "Thiere", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
-  { "nome": "Cleverton", "gols": 0, "assistencias": 0, "golsSofridos": 8, "partidas": 9, "frequencia": 9, "isGoleiro": true },
-  { "nome": "Adriano", "gols": 0, "assistencias": 0, "golsSofridos": 2, "partidas": 10, "frequencia": 10, "isGoleiro": true },
+  { "nome": "Cleverton", "gols": 1, "assistencias": 0, "golsSofridos": 8, "partidas": 9, "frequencia": 9, "isGoleiro": true },
+  { "nome": "Adriano", "gols": 1, "assistencias": 0, "golsSofridos": 2, "partidas": 10, "frequencia": 10, "isGoleiro": true },
   { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 5, "partidas": 7, "frequencia": 7, "isGoleiro": true }
 ];
 
