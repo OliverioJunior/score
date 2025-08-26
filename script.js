@@ -1,24 +1,76 @@
 // Dados dos jogadores (JSON) - ATUALIZADO
+/**
+ * @typedef {Object} Player
+ * @property {string} nome - Nome do jogador
+ * @property {number} gols - Quantidade de gols marcados
+ * @property {number} assistencias - Quantidade de assistências feitas
+ * @property {number} golsSofridos - Quantidade de gols sofridos (se for goleiro)
+ * @property {number} partidas - Quantidade de partidas jogadas
+ * @property {number} frequencia - Frequência de participação (em porcentagem)
+ * @property {boolean} isGoleiro - Se é goleiro ou não
+ * @property {string | null} foto - Caminho para a foto do jogador
+ */
 const playersData = [
-  { "nome": "Leandro", "gols": 2, "assistencias": 1, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false },
-  { "nome": "Alan", "gols": 1, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false },
-  { "nome": "Jhon", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false },
-  { "nome": "Teteu", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false },
-  { "nome": "Rick", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false },
-  { "nome": "Kennedy", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false },
-  { "nome": "Júlio", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false },
-  { "nome": "Lizandro", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false },
-  { "nome": "Denisson", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false },
-  { "nome": "Patuzinho", "gols": 1, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false },
-  { "nome": "Daniel", "gols": 4, "assistencias": 3, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
-  { "nome": "Felipe", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
-  { "nome": "Thawan", "gols": 4, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
-  { "nome": "Guilherme", "gols": 1, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
-  { "nome": "Thiere", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false },
-  { "nome": "Cleverton", "gols": 1, "assistencias": 0, "golsSofridos": 8, "partidas": 9, "frequencia": 9, "isGoleiro": true },
-  { "nome": "Adriano", "gols": 1, "assistencias": 0, "golsSofridos": 2, "partidas": 10, "frequencia": 10, "isGoleiro": true },
-  { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 5, "partidas": 7, "frequencia": 7, "isGoleiro": true }
+  { "nome": "Leandro", "gols": 2, "assistencias": 1, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
+  { "nome": "Alan", "gols": 1, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": "./images/players/allan_santos.jpeg" },
+  { "nome": "Jhon", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
+  { "nome": "Teteu", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
+  { "nome": "Rick", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
+  { "nome": "Kennedy", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
+  { "nome": "Júlio", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
+  { "nome": "Lizandro", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
+  { "nome": "Denisson", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
+  { "nome": "Patuzinho", "gols": 1, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
+  { "nome": "Daniel", "gols": 4, "assistencias": 3, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
+  { "nome": "Felipe", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
+  { "nome": "Thawan", "gols": 4, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
+  { "nome": "Guilherme", "gols": 1, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
+  { "nome": "Thiere", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
+  { "nome": "Cleverton", "gols": 1, "assistencias": 0, "golsSofridos": 8, "partidas": 9, "frequencia": 9, "isGoleiro": true, "foto": null },
+  { "nome": "Adriano", "gols": 1, "assistencias": 0, "golsSofridos": 2, "partidas": 10, "frequencia": 10, "isGoleiro": true, "foto": null },
+  { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 5, "partidas": 7, "frequencia": 7, "isGoleiro": true, "foto": null }
 ];
+
+// Função para criar avatar padrão com iniciais
+function createDefaultAvatar(nome) {
+    const initials = nome.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'];
+    const color = colors[nome.length % colors.length];
+    
+    return `<div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color: ${color}">${initials}</div>`;
+}
+
+// Função para renderizar foto do jogador
+/**
+ * Renderiza a foto do jogador ou um avatar padrão se não houver foto.
+ * @param {Object} player - O jogador cuja foto será renderizada.
+ * @param {string} player.nome - O nome do jogador.
+ * @param {string|null} player.foto - O caminho para a foto do jogador.
+ * @returns {string} - O HTML para renderizar a foto ou o avatar.
+ */
+function renderPlayerPhoto(player) {
+    console.log('Renderizando foto para:', player.nome, 'Caminho:', player.foto);
+    if (player.foto !== null) {
+        return `<img src="${player.foto}" alt="${player.nome}" class="w-8 h-8 rounded-full object-cover" onload="console.log('Foto carregada com sucesso:', '${player.nome}')" onerror="console.log('Erro ao carregar foto:', '${player.nome}'); handleImageError(this, '${player.nome}')">`;
+    } else {
+        console.log('Usando avatar padrão para:', player.nome);
+        return createDefaultAvatar(player.nome);
+    }
+}
+
+// Função para lidar com erro de carregamento de imagem
+function handleImageError(img, playerName) {
+    const initials = playerName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'];
+    const color = colors[playerName.length % colors.length];
+    
+    const avatarDiv = document.createElement('div');
+    avatarDiv.className = 'w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold';
+    avatarDiv.style.backgroundColor = color;
+    avatarDiv.textContent = initials;
+    
+    img.parentNode.replaceChild(avatarDiv, img);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const tableBody = document.getElementById('stats-table-body');
@@ -92,7 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
         row.innerHTML = `
             <td class="px-6 py-4 font-medium text-white">${rank}</td>
             <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
-                ${goalkeeperIcon}${player.nome}
+                <div class="flex items-center gap-3">
+                    ${renderPlayerPhoto(player)}
+                    <span>${goalkeeperIcon}${player.nome}</span>
+                </div>
             </th>
             <td class="px-6 py-4 text-center">${formatInt(player.gols)}</td>
             <td class="px-6 py-4 text-center">${formatInt(player.assistencias)}</td>
@@ -128,7 +183,10 @@ document.addEventListener('DOMContentLoaded', () => {
         row.innerHTML = `
             <td class="px-6 py-4 font-medium text-white">${rank}</td>
             <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
-                ${goalkeeperIcon}${player.nome}
+                <div class="flex items-center gap-3">
+                    ${renderPlayerPhoto(player)}
+                    <span>${goalkeeperIcon}${player.nome}</span>
+                </div>
             </th>
             <td class="px-6 py-4 text-center">${formatInt(player.partidas)}</td>
             <td class="px-6 py-4 text-center">${formatInt(player.golsSofridos)}</td>
