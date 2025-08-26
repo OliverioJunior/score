@@ -12,6 +12,61 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        
+        /* Estilos para colunas fixas */
+        .table-container {
+            position: relative;
+            overflow-x: auto;
+        }
+        
+        .fixed-table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .fixed-table th:nth-child(1),
+        .fixed-table th:nth-child(2),
+        .fixed-table td:nth-child(1),
+        .fixed-table td:nth-child(2) {
+            position: sticky;
+            background-color: inherit;
+            z-index: 10;
+        }
+        
+        .fixed-table th:nth-child(1),
+        .fixed-table td:nth-child(1) {
+            left: 0;
+            z-index: 11;
+        }
+        
+        .fixed-table th:nth-child(2),
+        .fixed-table td:nth-child(2) {
+            left: 60px; /* Ajuste conforme a largura da primeira coluna */
+        }
+        
+        .fixed-table thead th:nth-child(1),
+        .fixed-table thead th:nth-child(2) {
+            background-color: rgb(55, 65, 81); /* bg-gray-700 */
+            z-index: 12;
+        }
+        
+        .fixed-table tbody td:nth-child(1),
+        .fixed-table tbody td:nth-child(2) {
+            background-color: rgb(31, 41, 55); /* bg-gray-800 */
+        }
+        
+        /* Sombra para indicar scroll */
+        .fixed-table th:nth-child(2)::after,
+        .fixed-table td:nth-child(2)::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            bottom: 0;
+            width: 10px;
+            background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);
+            pointer-events: none;
+        }
     </style>
 </head>
 
@@ -26,8 +81,8 @@
 
 
         <!-- Tabela Jogadores de Linha -->
-        <div class="overflow-x-auto bg-gray-800 rounded-xl shadow-lg mb-10">
-            <table class="w-full text-sm text-left text-gray-400">
+        <div class="table-container bg-gray-800 rounded-xl shadow-lg mb-10">
+            <table class="fixed-table w-full text-sm text-left text-gray-400">
                 <thead class="text-xs uppercase bg-gray-700 text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">#</th>
@@ -48,9 +103,9 @@
         </div>
 
         <!-- Tabela Goleiros -->
-        <div class="overflow-x-auto bg-gray-800 rounded-xl shadow-lg">
+        <div class="table-container bg-gray-800 rounded-xl shadow-lg">
             <h2 class="text-xl font-bold text-white px-6 pt-6 pb-2">Goleiros</h2>
-            <table class="w-full text-sm text-left text-gray-400">
+            <table class="fixed-table w-full text-sm text-left text-gray-400">
                 <thead class="text-xs uppercase bg-gray-700 text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">#</th>
