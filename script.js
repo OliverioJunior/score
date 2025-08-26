@@ -11,33 +11,33 @@
  * @property {string | null} foto - Caminho para a foto do jogador
  */
 const playersData = [
-  { "nome": "Leandro", "gols": 2, "assistencias": 1, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
-  { "nome": "Alan", "gols": 1, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": "./images/players/allan_santos.jpeg" },
-  { "nome": "Jhon", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
-  { "nome": "Teteu", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
-  { "nome": "Rick", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null },
-  { "nome": "Kennedy", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
-  { "nome": "Júlio", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
-  { "nome": "Lizandro", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
-  { "nome": "Denisson", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
-  { "nome": "Patuzinho", "gols": 1, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null },
-  { "nome": "Daniel", "gols": 4, "assistencias": 3, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
-  { "nome": "Felipe", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
-  { "nome": "Thawan", "gols": 4, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
-  { "nome": "Guilherme", "gols": 1, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
-  { "nome": "Thiere", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null },
-  { "nome": "Cleverton", "gols": 1, "assistencias": 0, "golsSofridos": 8, "partidas": 9, "frequencia": 9, "isGoleiro": true, "foto": null },
-  { "nome": "Adriano", "gols": 1, "assistencias": 0, "golsSofridos": 2, "partidas": 10, "frequencia": 10, "isGoleiro": true, "foto": null },
-  { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 5, "partidas": 7, "frequencia": 7, "isGoleiro": true, "foto": null }
+  { "nome": "Leandro", "gols": 2, "assistencias": 1, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Alan", "gols": 1, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": "./images/players/allan_santos.jpeg", "instagram": "@allan_snts7" },
+  { "nome": "Jhon", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Teteu", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Rick", "gols": 2, "assistencias": 0, "golsSofridos": null, "partidas": 9, "frequencia": 9, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Kennedy", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Júlio", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Lizandro", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Denisson", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Patuzinho", "gols": 1, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Daniel", "gols": 4, "assistencias": 3, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Felipe", "gols": 0, "assistencias": 2, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Thawan", "gols": 4, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Guilherme", "gols": 1, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Thiere", "gols": 0, "assistencias": 1, "golsSofridos": null, "partidas": 10, "frequencia": 10, "isGoleiro": false, "foto": null, "instagram": "" },
+  { "nome": "Cleverton", "gols": 1, "assistencias": 0, "golsSofridos": 8, "partidas": 9, "frequencia": 9, "isGoleiro": true, "foto": null, "instagram": "" },
+  { "nome": "Adriano", "gols": 1, "assistencias": 0, "golsSofridos": 2, "partidas": 10, "frequencia": 10, "isGoleiro": true, "foto": null, "instagram": "" },
+  { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 5, "partidas": 7, "frequencia": 7, "isGoleiro": true, "foto": null, "instagram": "" }
 ];
 
-// Função para criar avatar padrão com iniciais
-function createDefaultAvatar(nome) {
+// Função para criar avatar padrão com iniciais (versão compatível)
+function createDefaultAvatar(nome, sizeClass = 'w-8 h-8') {
     const initials = nome.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
     const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'];
     const color = colors[nome.length % colors.length];
     
-    return `<div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color: ${color}">${initials}</div>`;
+    return `<div class="${sizeClass} rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color: ${color}">${initials}</div>`;
 }
 
 // Função para renderizar foto do jogador
@@ -49,13 +49,10 @@ function createDefaultAvatar(nome) {
  * @returns {string} - O HTML para renderizar a foto ou o avatar.
  */
 function renderPlayerPhoto(player) {
-    console.log('Renderizando foto para:', player.nome, 'Caminho:', player.foto);
     if (player.foto !== null) {
-        return `<img src="${player.foto}" alt="${player.nome}" class="w-8 h-8 rounded-full object-cover" onload="console.log('Foto carregada com sucesso:', '${player.nome}')" onerror="console.log('Erro ao carregar foto:', '${player.nome}'); handleImageError(this, '${player.nome}')">`;
-    } else {
-        console.log('Usando avatar padrão para:', player.nome);
-        return createDefaultAvatar(player.nome);
-    }
+        return `<img src="${player.foto}" alt="${player.nome}" class="w-8 h-8 rounded-full object-cover">`;
+    } 
+    return createDefaultAvatar(player.nome);
 }
 
 // Função para lidar com erro de carregamento de imagem
@@ -70,6 +67,71 @@ function handleImageError(img, playerName) {
     avatarDiv.textContent = initials;
     
     img.parentNode.replaceChild(avatarDiv, img);
+}
+
+// Função para abrir o modal do jogador
+function openPlayerModal(player) {
+    const modal = document.getElementById('playerModal');
+    const modalPhoto = document.getElementById('modalPhoto');
+    const modalPlayerName = document.getElementById('modalPlayerName');
+    const modalPlayerRole = document.getElementById('modalPlayerRole');
+    const modalGols = document.getElementById('modalGols');
+    const modalAssistencias = document.getElementById('modalAssistencias');
+    const modalPartidas = document.getElementById('modalPartidas');
+    const modalPontuacao = document.getElementById('modalPontuacao');
+
+    const modalInstagramSection = document.getElementById('modalInstagramSection');
+    const modalInstagram = document.getElementById('modalInstagram');
+    const modalInstagramText = document.getElementById('modalInstagramText');
+    
+    // Preencher dados do modal
+    modalPlayerName.textContent = player.nome;
+    modalPlayerRole.textContent = player.isGoleiro ? 'Goleiro' : 'Jogador de Linha';
+    modalGols.textContent = player.gols || 0;
+    modalAssistencias.textContent = player.assistencias || 0;
+    modalPartidas.textContent = player.partidas || 0;
+    
+    // Calcular pontuação
+    const pontuacao = (player.gols * 1) + (player.assistencias * 1.1);
+    modalPontuacao.textContent = pontuacao.toFixed(2);
+    
+
+    
+    // Foto do jogador
+    if (player.foto) {
+        modalPhoto.innerHTML = `<img src="${player.foto}" alt="${player.nome}" class="w-24 h-24 rounded-full object-cover mx-auto">`;
+    } else {
+        modalPhoto.innerHTML = createDefaultAvatarCustom(player.nome, 'w-24 h-24');
+    }
+    
+    // Instagram
+    if (player.instagram && player.instagram.trim() !== '') {
+        modalInstagramSection.classList.remove('hidden');
+        modalInstagram.href = `https://instagram.com/${player.instagram.replace('@', '')}`;
+        modalInstagramText.textContent = player.instagram;
+    } else {
+        modalInstagramSection.classList.add('hidden');
+    }
+    
+    // Mostrar modal
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevenir scroll do body
+}
+
+// Função para fechar o modal
+function closePlayerModal() {
+    const modal = document.getElementById('playerModal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restaurar scroll do body
+}
+
+// Função para criar avatar padrão com tamanho customizável
+function createDefaultAvatarCustom(nome, sizeClass = 'w-8 h-8') {
+    const initials = nome.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'];
+    const color = colors[nome.length % colors.length];
+    
+    return `<div class="${sizeClass} rounded-full flex items-center justify-center text-white text-xs font-bold mx-auto" style="background-color: ${color}">${initials}</div>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -146,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
                 <div class="flex items-center gap-3">
                     ${renderPlayerPhoto(player)}
-                    <span>${goalkeeperIcon}${player.nome}</span>
+                    <span class="cursor-pointer hover:text-blue-400 transition-colors" onclick="openPlayerModal(${JSON.stringify(player).replace(/"/g, '&quot;')})">${goalkeeperIcon}${player.nome}</span>
                 </div>
             </th>
             <td class="px-6 py-4 text-center">${formatInt(player.gols)}</td>
@@ -185,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
                 <div class="flex items-center gap-3">
                     ${renderPlayerPhoto(player)}
-                    <span>${goalkeeperIcon}${player.nome}</span>
+                    <span class="cursor-pointer hover:text-blue-400 transition-colors" onclick="openPlayerModal(${JSON.stringify(player).replace(/"/g, '&quot;')})">${goalkeeperIcon}${player.nome}</span>
                 </div>
             </th>
             <td class="px-6 py-4 text-center">${formatInt(player.partidas)}</td>
@@ -195,4 +257,29 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         goalkeeperBody.appendChild(row);
     });
+    
+    // Event listeners para o modal
+    const closeModalBtn = document.getElementById('closeModal');
+    const modal = document.getElementById('playerModal');
+    
+    // Fechar modal ao clicar no botão X
+    closeModalBtn.addEventListener('click', closePlayerModal);
+    
+    // Fechar modal ao clicar fora dele
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closePlayerModal();
+        }
+    });
+    
+    // Fechar modal com a tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closePlayerModal();
+        }
+    });
 });
+
+// Tornar as funções globais para uso nos onclick
+window.openPlayerModal = openPlayerModal;
+window.closePlayerModal = closePlayerModal;
