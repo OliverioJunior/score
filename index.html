@@ -24,6 +24,13 @@
             border-spacing: 0;
         }
         
+        /* Garantir que colunas não fixas fiquem atrás */
+        .fixed-table td:not(:nth-child(1)):not(:nth-child(2)),
+        .fixed-table th:not(:nth-child(1)):not(:nth-child(2)) {
+            z-index: 1;
+            position: relative;
+        }
+        
         .fixed-table th:nth-child(1),
         .fixed-table th:nth-child(2),
         .fixed-table td:nth-child(1),
@@ -37,11 +44,15 @@
         .fixed-table td:nth-child(1) {
             left: 0;
             z-index: 11;
+            min-width: 60px;
+            width: 60px;
         }
         
         .fixed-table th:nth-child(2),
         .fixed-table td:nth-child(2) {
-            left: 80px; /* Ajuste conforme a largura da primeira coluna */
+            left: 60px;
+            min-width: 200px;
+            max-width: 250px;
         }
         
         .fixed-table thead th:nth-child(1),
@@ -55,6 +66,17 @@
             background-color: rgb(31, 41, 55); /* bg-gray-800 */
         }
         
+        /* Alternating row colors for fixed columns */
+        .fixed-table tbody tr:nth-child(odd) td:nth-child(1),
+        .fixed-table tbody tr:nth-child(odd) td:nth-child(2) {
+            background-color: rgb(31, 41, 55); /* bg-gray-800 */
+        }
+        
+        .fixed-table tbody tr:nth-child(even) td:nth-child(1),
+        .fixed-table tbody tr:nth-child(even) td:nth-child(2) {
+            background-color: rgb(17, 24, 39); /* bg-gray-900 */
+        }
+        
         /* Sombra para indicar scroll */
         .fixed-table th:nth-child(2)::after,
         .fixed-table td:nth-child(2)::after {
@@ -64,8 +86,30 @@
             right: -10px;
             bottom: 0;
             width: 10px;
-            background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);
+            background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
             pointer-events: none;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .fixed-table th:nth-child(1),
+            .fixed-table td:nth-child(1) {
+                min-width: 50px;
+                width: 50px;
+                font-size: 0.875rem;
+            }
+            
+            .fixed-table th:nth-child(2),
+            .fixed-table td:nth-child(2) {
+                left: 50px;
+                min-width: 180px;
+                max-width: 200px;
+            }
+            
+            .table-container {
+                border-radius: 0.75rem;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
         }
     </style>
 </head>
