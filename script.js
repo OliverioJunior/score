@@ -34,7 +34,7 @@ const playersData = [
   { "nome": "Datã", "gols": 0, "assistencias": 0, "golsSofridos": null, "partidas": 7, "frequencia": 7, "isGoleiro": false, "foto": null, "instagram": "" },
   { "nome": "Cleverton", "gols": 1, "assistencias": 0, "golsSofridos": 11, "partidas": 17, "frequencia": 17, "isGoleiro": true, "foto": null, "instagram": "" },
   { "nome": "Adriano", "gols": 1, "assistencias": 0, "golsSofridos": 4, "partidas": 19, "frequencia": 19, "isGoleiro": true, "foto": null, "instagram": "" },
-  { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 5, "partidas": 7, "frequencia": 7, "isGoleiro": true, "foto": null, "instagram": "" }
+  { "nome": "Negão", "gols": 0, "assistencias": 0, "golsSofridos": 10, "partidas": 14, "frequencia": 14, "isGoleiro": true, "foto": null, "instagram": "" }
 ];
 
 // Função para criar avatar padrão com iniciais (versão compatível)
